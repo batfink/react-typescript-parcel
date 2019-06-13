@@ -4,6 +4,8 @@ interface Props {
   count?: number
 }
 
-const Counter: React.FunctionComponent<Props> = props => <h1>{props.count}</h1>
+const Counter: React.FunctionComponent<Props> = ({ count }) => (
+  <span>{count}</span>
+)
 
 export default Counter
