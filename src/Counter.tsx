@@ -4,7 +4,7 @@ interface Props {
   count?: number
 }
 
-const Counter: React.FunctionComponent<Props> = ({ count }) => (
+const Counter: React.FunctionComponent<Props> = ({ count }: Props) => (
   <span>{count}</span>
 )
 
