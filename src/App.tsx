@@ -15,7 +15,7 @@ interface Props {
 }
 
 const App = styled.div<Props>`
-  background-color: #${({ bg }) => (bg ? bg : 'ffff00')};
+  background-color: ${({ bg }) => bg && '#ffff00'};
   width: 100vw;
   height: 100vh;
   align-items: center;
@@ -26,7 +26,7 @@ const App = styled.div<Props>`
 render(
   <>
     <GlobalStyle />
-    <App bg="ff9900">
+    <App bg="#ff9900">
       <Counter count={9} />
     </App>
   </>,
