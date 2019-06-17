@@ -1,34 +1,21 @@
 import * as React from 'react'
 import { render } from 'react-dom'
-import styled, { createGlobalStyle } from 'styled-components'
 
 import Counter from './Counter'
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-  }
-`
+// import * as css from './App.css'
+import { foo } from './App.css'
 
 interface Props {
-  bg: string
+  children: React.ReactNode
 }
 
-const App = styled.div<Props>`
-  background-color: ${({ bg }) => bg && '#ffff00'};
-  width: 100vw;
-  height: 100vh;
-  align-items: center;
-  justify-items: center;
-  display: grid;
-`
+const App: React.FunctionComponent<Props> = ({ children }: Props) => (
+  <div className={foo}>{children}</div>
+)
 
 render(
-  <>
-    <GlobalStyle />
-    <App bg="#ff9900">
-      <Counter count={9} />
-    </App>
-  </>,
+  <App>
+    <Counter count={9} />
+  </App>,
   document.getElementById('main'),
 )

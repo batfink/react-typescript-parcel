@@ -1,19 +1,24 @@
 {
   "scripts": {
+    "cleanup": "rimraf dist/**",
     "dev": "parcel src/index.html",
+    "predev": "npm run cleanup",
     "build": "parcel build src/index.html",
+    "prebuild": "npm run cleanup",
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
     "parcel-plugin-bundle-visualiser": "^1.2.0",
+    "parcel-plugin-typed-css-modules": "^1.1.0",
+    "postcss-modules": "^1.4.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "styled-components": "^4.3.1"
   },
   "devDependencies": {
+    "@types/css": "0.0.31",
     "@types/react": "^16.8.19",
     "@types/react-dom": "^16.8.4",
-    "@types/styled-components": "^4.1.16",
     "@typescript-eslint/eslint-plugin": "^1.10.2",
     "@typescript-eslint/parser": "^1.10.2",
     "eslint": "^5.16.0",
@@ -25,6 +30,7 @@
     "eslint-plugin-react": "^7.13.0",
     "parcel-bundler": "^1.12.3",
     "prettier": "^1.18.2",
+    "rimraf": "^2.6.3",
     "typescript": "^3.5.1"
   }
 }

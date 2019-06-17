@@ -1,0 +1,18 @@
+:global body {
+  margin: 0;
+}
+
+.foo {
+  background-color: bisque;
+  color: orange;
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.bar {
+  background-color: aquamarine;
+  color: chocolate;
+}
